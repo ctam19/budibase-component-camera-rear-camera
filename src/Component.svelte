@@ -57,6 +57,8 @@
     try {
       const stream = await navigator.mediaDevices.getUserMedia({
         video: true,
+        
+video: { facingMode: { exact: "environment" } }
       });
       const track = stream.getVideoTracks()[0];
       imageCapture = new ImageCapture(track);
